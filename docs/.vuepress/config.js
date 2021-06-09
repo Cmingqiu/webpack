@@ -30,8 +30,8 @@ module.exports = {
     // displayAllHeaders: true, //显示所有页面的标题链接,不建议设置true  默认值：false
     //导航链接
     nav: [
-      { text: 'Node', link: 'https://cmingqiu.github.io/blog/node/', target: '_self' },
-      { text: 'Blog', link: 'https://cmingqiu.github.io/blog/', target: '_self' },
+      { text: 'Node', link: 'https://cmingqiu.github.io/node/start/', target: '_self' },
+      { text: 'Blog', link: 'https://cmingqiu.github.io/blog/start/', target: '_self' },
       // { text: 'Guide', link: '/guide/' },
       // { text: 'Google', link: 'https://google.com' },
       {
@@ -52,7 +52,18 @@ module.exports = {
     //sidebar: ['/', 'basic/button', ['form/input', '表单']]
     sidebar: [
       ['start/', '起步'],
+      {
+        title: '基础配置',
+        children: [
+          ['baseConfig/webpack.base.js', 'webpack.base.js'],
+          ['baseConfig/webpack.dev.js', 'webpack.dev.js'],
+          ['baseConfig/webpack.prod.js', 'webpack.prod.js'],
+        ]
+      },
       ['module-compatible/', '模块兼容'],
+      // ['AST/', 'AST']
+      // ['loader/', 'loader']
+      // ['plugin/', 'plugin']
     ]
   },
   configureWebpack: {
