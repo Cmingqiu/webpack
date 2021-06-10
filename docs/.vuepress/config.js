@@ -53,7 +53,7 @@ module.exports = {
     sidebar: [
       ['start/', '起步'],
       {
-        title: '基础配置',
+        title: '基础配置(使用)',
         children: [
           ['baseConfig/webpack.base.js', 'webpack.base.js'],
           ['baseConfig/webpack.dev.js', 'webpack.dev.js'],
@@ -61,7 +61,14 @@ module.exports = {
         ]
       },
       ['module-compatible/', '模块兼容'],
-      // ['AST/', 'AST']
+      {
+        title: 'AST抽象语法树',
+        children: [
+          ['AST/start', '基础知识'],
+          ['AST/esprima', 'esprima'],
+          ['AST/babel插件', 'babel插件'],
+        ]
+      }
       // ['loader/', 'loader']
       // ['plugin/', 'plugin']
     ]

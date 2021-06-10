@@ -10,7 +10,7 @@ module.exports = merge(baseConfig, {
       {
         test: /\.css$/,
         use: [
-          'style-loader', // style-loader 再把css插入head标签中,内部样式<style>..</style>
+          'style-loader', // style-loader 再把css插入head标签中,内部样式<style>  </style>
           'css-loader',
           'postcss-loader' //兼容css3写法，添加浏览器前缀
         ]

@@ -1,16 +1,18 @@
 :::tip 目录结构
-├── config  
-│ ├── webpack.base.js  
-│ ├── webpack.dev.js  
-│ └── webpack.prod.js  
-├── public  
-│ ├── index.html  
-│ └── favicon.ico  
-├── src  
-│ └── index.js  
-└── package.json
+
+    ├── config
+    │ ├── webpack.base.js
+    │ ├── webpack.dev.js
+    │ └── webpack.prod.js
+    ├── public
+    │ ├── index.html
+    │ └── favicon.ico
+    ├── src
+    │ └── index.js
+    └── package.json
 
 :::
+
 通过 merge 合并配置项
 webpack 打包配置文件
 
