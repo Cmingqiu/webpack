@@ -20,6 +20,23 @@ webpack 打包配置文件
 - webpack.dev.js 开发使用的配置文件
 - webpack.prod.js 打包上线使用的配置文件
 
+### 安装
+
+```js
+cnpm install
+  webpack webpack-cli webpack-dev-server
+  html-webpack-plugin clean-webpack-plugin
+
+  babel-loader @babel/core @babel/preset-env
+  style-loader css-loader sass-loader node-sass mini-css-extract-plugin optimize-css-assets-webpack-plugin postcss-loader
+  vue-loader vue-template-compiler //vue2.x ; vue3.x : @vue/compiler-sfc
+  file-loader url-loader
+  eslint eslint-loader babel-eslint
+  html-loader
+-D
+
+```
+
 ```js
 const path = require('path');
 const Webpack = require('webpack');
