@@ -37,5 +37,12 @@
 
 - esprima
 - traceur
-- acorn
+- acorn (webpack 内部解析 AST 使用的)
 - shift
+
+## AST 遍历
+
+1. AST 是深度优先遍历
+2. 访问者模式 Visitor 对于某个对象或者一组对象，不同的访问者，产生的结果不同，执行操作也不同
+3. Visitor 的对象定义了用于 AST 中获取具体节点的方法
+4. Visitor 上挂载以节点 type 命名的方法，当遍历 AST 的时候，如果匹配上 type，就会执行对应的方法

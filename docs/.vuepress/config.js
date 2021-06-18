@@ -74,11 +74,19 @@ module.exports = {
       // ['plugin/', 'plugin']
     ]
   },
+  /*  scss: {
+     includePaths: ["./styles/index.scss"]
+   }, */
   configureWebpack: {
     resolve: {
       alias: {
         '@public': path.resolve(__dirname, './public')
       }
     }
-  }
+  },
+  /* chainWebpack: (config, isServer) => {
+    config.resolveLoader
+      .modules
+      .add(path.resolve(__dirname, './node_modules'))
+  } */
 };
