@@ -69,8 +69,8 @@ module.exports = {
           ['AST/babel插件', 'babel插件'],
         ]
       },
-      ['webpack-flow/', 'webpack工作流']
-      // ['loader/', 'loader']
+      ['webpack-flow/', 'webpack工作流'],
+      ['loader/', 'loader']
       // ['plugin/', 'plugin']
     ]
   },

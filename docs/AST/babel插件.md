@@ -37,7 +37,7 @@ const BabelPluginTransformEs2015ArrowFunctions = {
   }
 };
 
-let es5Code = core.transform(sourceCode, {
+let { code: es5Code, map, ast } = core.transform(sourceCode, {
   plugins: [BabelPluginTransformEs2015ArrowFunctions]
 });
 
@@ -77,7 +77,7 @@ let BabelPluginTransformEs2015ArrowFunctions2 = {
   }
 };
 function hoistFunctionEnvironment(fnPath) {
-  const thisEnvFn = fnPath.findParent((p) => {
+  const thisEnvFn = fnPath.findParent(p => {
     //是一个函数，不能是箭头函数 或者 是根节点也可以
     return (p.isFunction() && !p.isArrowFunctionExpression()) || p.isProgram();
   });
@@ -91,7 +91,7 @@ function hoistFunctionEnvironment(fnPath) {
       id: types.identifier(thisBinding),
       init: types.thisExpression()
     });
-    thisPaths.forEach((item) => {
+    thisPaths.forEach(item => {
       //创建一个_this的标识符
       let thisBindingRef = types.identifier(thisBinding);
       //把老的路径 上的节点替换成新节点
