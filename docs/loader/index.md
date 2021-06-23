@@ -77,9 +77,9 @@ require('inline-loader1!inline-loader2!./title.js');
 **_inline loader 前面可以加符号，决定 loader 的组合?_**
 符号|变量|含义
 :---:|:--:|--
-!|noPreAutoLoaders|不要前置和普通 loader
-!!|noAutoLoaders|不要普通 loader
--!|noPrePostAutoLoaders|不要前后置和普通 loader,只要内联 loader
+-!|noPreAutoLoaders|不要前置和普通 loader
+!|noAutoLoaders|不要普通 loader
+!!|noPrePostAutoLoaders|不要前后置和普通 loader,只要内联 loader
 例如：
 
 ```js
