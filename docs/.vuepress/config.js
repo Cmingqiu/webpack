@@ -70,8 +70,8 @@ module.exports = {
         ]
       },
       ['webpack-flow/', 'webpack工作流'],
-      ['loader/', 'loader']
-      // ['plugin/', 'plugin']
+      ['loader/', 'loader'],
+      ['plugin/', 'plugin']
     ]
   },
   /*  scss: {
