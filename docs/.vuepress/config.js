@@ -22,7 +22,7 @@ module.exports = {
     repo: 'Cmingqiu/webpack', //导航上的github链接
     docsDir: 'docs',
     // docsRepo: '',
-    lastUpdated: '上次更新:',
+    // lastUpdated: '上次更新:',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     smoothScroll: true,

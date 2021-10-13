@@ -57,7 +57,7 @@ class ZipPlugin {
   }
   apply(compiler) {
     let that = this;
-    compiler.hooks.compilation.tap('ZipPlugin', (compilation) => {
+    compiler.hooks.compilation.tap('ZipPlugin', compilation => {
       compilation.hooks.processAssets.tapAsync(
         'ZipPlugin',
         (assets, callback) => {
@@ -65,7 +65,7 @@ class ZipPlugin {
           for (let filename in assets) {
             zip.file(filename, assets[filename].source());
           }
-          zip.generateAsync({ type: 'nodebuffer' }).then((data) => {
+          zip.generateAsync({ type: 'nodebuffer' }).then(data => {
             assets[that.options.zipName] = new RawSource(data);
             callback();
           });
@@ -90,4 +90,64 @@ module.exports = {
     })
   ]
 };
+```
+
+### style-loader
+
+```js
+function styleLoader(source) {
+  let script = `
+    let style = document.createElement('style')
+    style.innerHTML = ${JSON.stringify(source)}
+    document.head.appendChild(style);
+  `;
+  return script;
+}
+module.exports = styleLoader;
+```
+
+### sass-loader
+
+```js
+const sass = require('node-sass');
+function sassLoader(source) {
+  //异步
+  const callback = this.async();
+  sass.render(
+    {
+      data: source
+    },
+    (err, res) => {
+      if (err) {
+        console.log(err);
+      } else {
+        // console.log(res.css.toString());
+        callback(null, res.css); //res.css 是一个Buffer
+      }
+    }
+  );
+  /*  同步
+   * const result = sass.renderSync({data: source})
+   * return result.css */
+}
+module.exports = sassLoader;
+```
+
+### less-loader
+
+```js
+const less = require('less');
+function lessLoader(source) {
+  const callback = this.async();
+  less.render(
+    source,
+    {
+      filename: 'index.js'
+    },
+    (err, res) => {
+      callback(null, res.css);
+    }
+  );
+}
+module.exports = lessLoader;
 ```
