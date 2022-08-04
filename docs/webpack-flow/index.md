@@ -11,7 +11,7 @@
 9. 再把每个 Chunk 转换成一个单独的文件加入到输出列表
 10. 在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统
 
-![webpackflow](@public/img/flow/webpackflow.jpg)
+![webpackflow](/img/flow/webpackflow.jpg)
 
 ## 1. 初始化参数：从配置文件和 Shell 语句中读取并合并参数,得出最终的配置对象
 

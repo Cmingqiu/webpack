@@ -31,7 +31,7 @@ module.exports = loader;
  */
 ```
 
-![webpackflowloader](@public/img/loader/webpackflowloader.jpg)
+![webpackflowloader](/img/loader/webpackflowloader.jpg)
 
 ## 使用场景:
 
@@ -45,7 +45,7 @@ module.exports = loader;
 <div class="important-tip">不同类型loader执行顺序：pre前置->normal正常->inline内联->post后置  </div>
 <div class="important-tip">  同类型的loader再区分执行顺序：先下后上，先右后左（倒序执行） </div>
 
-![loader-runner.jpg](@public/img/loader/loader-runner.jpg)
+![loader-runner.jpg](/img/loader/loader-runner.jpg)
 
 ## loader.pitch
 
@@ -107,10 +107,7 @@ function loader(source, inputSourceMap, data) {
     presets: ['@babel/preset-env'],
     inputSourceMap: inputSourceMap,
     sourceMaps: true, //sourceMaps: true 是告诉 babel 要生成 sourcemap
-    filename: this.request
-      .split('!')[1]
-      .split('/')
-      .pop()
+    filename: this.request.split('!')[1].split('/').pop()
   };
   //在webpack.config.js中 增加devtool: 'eval-source-map'
   let { code, map, ast } = babel.transform(source, options);

@@ -26,7 +26,7 @@
 > 在计算机科学中，抽象语法树（abstract syntax tree 或者缩写为 AST），或者语法树（syntax tree），是源代码的抽象语法结构的树状表现形式，这里特指编程语言的源代码。  
 > Javascript 的语法是为了给开发者更好的编程而设计的，但是不适合程序的理解。所以需要转化为 AST 来使之更适合程序分析，浏览器编译器一般会把源码转化为 AST 来进行进一步的分析等其他操作。
 
-![ast1](@public/img/AST/ast1.jpg)
+![ast1](/img/AST/ast1.jpg)
 
 ## 4. JavaScript Parser
 
